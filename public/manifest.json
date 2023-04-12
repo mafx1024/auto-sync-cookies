@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "auto-sync-cookies",
+  "version": "1.0.0",
+  "description": "自动同步cookie，自定义同步cookie",
+  "author": "mafx",
+  "icons": {
+    "16": "sources/icon-16.png",
+    "32": "sources/icon-32.png",
+    "48": "sources/icon-48.png",
+    "128": "sources/icon-128.png"
+  },
+  "action": {
+    "default_icon": "sources/icon-48.png",
+    "default_title": "解决本地开发 localhost 请求无法携带 cookie 问题",
+    "default_popup": "index.html"
+  },
+  "permissions": ["storage", "cookies"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  }
+}
